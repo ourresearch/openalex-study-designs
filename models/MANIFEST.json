@@ -1,0 +1,170 @@
+{
+ "release": "v1.0.0",
+ "assets": {
+  "student-e5s-v1.tar.gz": {
+   "sha256": "bc34c29778e64600f0367e5afe468e2db68340eee3f9fcba1fb6cf7d9af4e414",
+   "bytes": 422083035,
+   "url": "https://github.com/ourresearch/openalex-study-designs/releases/download/v1.0.0/student-e5s-v1.tar.gz",
+   "what": "The student: multilingual-e5-small fine-tuned on the tagger's outputs. Unpacks to student-e5s/; load with student/infer.py.",
+   "files": {
+    "student-e5s/model.pt": {
+     "sha256": "8231072f254fe0e6665e3d97731df47dffa25a502d689c8fc7c462541e04dbcb",
+     "bytes": 470706622
+    },
+    "student-e5s/sentencepiece.bpe.model": {
+     "sha256": "cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865",
+     "bytes": 5069051
+    },
+    "student-e5s/special_tokens_map.json": {
+     "sha256": "38d989b0fdad0fec0c67c14b1f3c8b68184022cf6d4adc5444526ced8653f738",
+     "bytes": 965
+    },
+    "student-e5s/student.json": {
+     "sha256": "5a98fba02a7ed65d28e2004e8b436cba34ef0441b8ad5490e9680d43de4e8fa4",
+     "bytes": 348
+    },
+    "student-e5s/tokenizer.json": {
+     "sha256": "ef04f2b385d1514f500e779207ace0f53e30895ce37563179e29f4022d28ca38",
+     "bytes": 17083053
+    },
+    "student-e5s/tokenizer_config.json": {
+     "sha256": "dbdcd9767f0481fd8fd8cd6bce3e73dae7f5c44ce22ae1fde00a66498e71b454",
+     "bytes": 1203
+    },
+    "student-e5s/train_args.json": {
+     "sha256": "85a1f4d1afaba901c0765479daeec4bf1d34962e3cc34dfe48d9252f91c46981",
+     "bytes": 632
+    }
+   }
+  }
+ },
+ "student": {
+  "version": "student-e5s-v1",
+  "base": "intfloat/multilingual-e5-small",
+  "maxlen": 512,
+  "outputs": [
+   "rct",
+   "nonrandomized_trial",
+   "secondary_analysis",
+   "observational",
+   "case_report",
+   "systematic_review",
+   "meta_analysis",
+   "narrative_review",
+   "editorial_letter",
+   "protocol",
+   "guideline",
+   "other_primary_research",
+   "unknown",
+   "is_rct",
+   "human_subjects"
+  ],
+  "training_rows": 1496608,
+  "epochs": 1.0,
+  "steps": 46769,
+  "batch_size": 32,
+  "learning_rate": 5e-05,
+  "warmup_steps": 500,
+  "seed": 0,
+  "thresholds_and_routing": "student/route.py",
+  "certification": "python student/certify.py"
+ },
+ "data": {
+  "benchmarks/data/dev/dev_jev_outputs.jsonl.gz": {
+   "sha256": "168e126a8af12d95115495b5e7b7f6c502c3b804643788dabc769416a210fb56",
+   "bytes": 102478
+  },
+  "benchmarks/data/dev/dev_set.jsonl.gz": {
+   "sha256": "d0b9178063ca4819b99b742f0f78e192b3217f814eef8a9704bd7ce3f28bd815",
+   "bytes": 471823
+  },
+  "benchmarks/data/dev/dev_student_outputs.jsonl.gz": {
+   "sha256": "f25e971200086345f9e997f1b9858630b8a9e217868642a2f36cd152c1e523f7",
+   "bytes": 230813
+  },
+  "harness/runs/g_mix__jev-1.13.0.jsonl.gz": {
+   "sha256": "aec09dcd6046f7c83472cda3ad7ab9cc52c5063d87496faa24310498d5ff6dcf",
+   "bytes": 72263
+  },
+  "harness/runs/g_run1__jev-1.13.0.jsonl.gz": {
+   "sha256": "f4ad3f88b633e0465be4eb05ee32e5106a5e04188b98d92058765a673bb44ba1",
+   "bytes": 71967
+  },
+  "harness/runs/h10_rule__jev-1.13.0.jsonl.gz": {
+   "sha256": "18cf014347bc09217733f4016a4ed0077ab1ab72ec44f66b289cfe8c7ef1e6dc",
+   "bytes": 74378
+  },
+  "harness/runs/h12_title_only__jev-1.13.0.jsonl.gz": {
+   "sha256": "a33f1093e9f5c70542df5db8a338901f9412af815235327aaad601f7d0aa09f0",
+   "bytes": 87212
+  },
+  "harness/runs/h14_scope__jev-1.13.0.jsonl.gz": {
+   "sha256": "fbcef3e176874072b5972608b1e9bec8279c253aa14246d7f5698502152c1ffa",
+   "bytes": 72458
+  },
+  "harness/runs/h15_nrt__jev-1.13.0.jsonl.gz": {
+   "sha256": "213aecd01c5c801cd6ee88097056b7f55936e9165598d4d30ebf6e9716f1b35e",
+   "bytes": 72270
+  },
+  "harness/runs/h15_nrt__jev-latest.jsonl.gz": {
+   "sha256": "a93779736b0de6f7d3ee2e18e9e72118adf98742a01aa69fdedf88dbe6fe2f61",
+   "bytes": 72244
+  },
+  "harness/runs/h15b_nrt_v1rct__jev-1.13.0.jsonl.gz": {
+   "sha256": "7b5ed92b7a9afe132e0170cdf9b4c4686922ed5ef400f976e73c51eb4fa7fc16",
+   "bytes": 71818
+  },
+  "harness/runs/h16_rctnoul__jev-1.13.0.jsonl.gz": {
+   "sha256": "1d729711eedc4edfa36c251db6e049ecd55a8d621ceb822d3001a93270b68c53",
+   "bytes": 71615
+  },
+  "harness/runs/h2_conj__jev-1.13.0.jsonl.gz": {
+   "sha256": "202d10113a1a9d8faf75386f70ca81ab76b0cf629dcf74369d855aa38d88f438",
+   "bytes": 89087
+  },
+  "harness/runs/h3_sinks__jev-1.13.0.jsonl.gz": {
+   "sha256": "940ac563181853ff9a961cb0d2881bbbaa738e99abd6e8f828a92c97902e336f",
+   "bytes": 75756
+  },
+  "harness/runs/h4_atomic__jev-1.13.0.jsonl.gz": {
+   "sha256": "4b5cd853323b180d760f3c5e3c6b5635a6afb397560694d645d784bbeb36a5b9",
+   "bytes": 121251
+  },
+  "harness/runs/h5_features__jev-1.13.0.jsonl.gz": {
+   "sha256": "29c286753ca749a5ae1ef02982c3c3c3dd4c601a329205f9d029ebe66e732781",
+   "bytes": 73175
+  },
+  "harness/runs/h6_order__jev-1.13.0.jsonl.gz": {
+   "sha256": "79d9f5753956f2ea8f99b7d7ba57a8715eeb8d7de9fdf7a63cb60fce2e4fc893",
+   "bytes": 72844
+  },
+  "harness/runs/h7_paraphrase__jev-1.13.0.jsonl.gz": {
+   "sha256": "a0c876083ae11ce746eea277a1ee322318e600dd4756b6d9661c4572c73e82a7",
+   "bytes": 82745
+  },
+  "harness/runs/h_combo1__jev-1.13.0.jsonl.gz": {
+   "sha256": "7ca6023c44c339ec0a82d976b3f13d2c5d60ce952f813e22486fa645e688678e",
+   "bytes": 94408
+  },
+  "harness/runs/h_combo2__jev-1.13.0.jsonl.gz": {
+   "sha256": "447860df34538cb00a7602dee11399da80cb888e898ff0a2034799e1e6fafa4f",
+   "bytes": 82945
+  },
+  "harness/runs/r2_base__jev-1.13.0.jsonl.gz": {
+   "sha256": "9a5ebc66071ab402dc2d8cedb97addff63b631ab396093cdaa6f8226ff1d1f92",
+   "bytes": 72779
+  },
+  "harness/runs/r2_shortnoul__jev-1.13.0.jsonl.gz": {
+   "sha256": "4a64d04c8583b1ed9576dccfa7c616aa30c44b665806e778cf8757fddb156ace",
+   "bytes": 72904
+  },
+  "harness/runs/r2_v3__jev-1.13.0.jsonl.gz": {
+   "sha256": "6d10c56a8dc1065f31ca338085800b8dd2d942c226c5da64d7165f4961675e08",
+   "bytes": 90222
+  },
+  "harness/runs/v1__jev-1.13.0.jsonl.gz": {
+   "sha256": "17af8fa2dda177c6f542da07971c02c9a25e95d293f28156fdafb730e42e5cde",
+   "bytes": 72682
+  }
+ }
+}

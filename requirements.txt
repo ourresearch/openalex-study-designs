@@ -1,0 +1,7 @@
+# Python 3.10 or later. Scoring and certification (harness/certify.py, harness/compare.py, harness/holdout.py,
+# student/certify.py) and the check (python -m tagger.check_same) need only the standard library, as does
+# tagger/fetch_works.py. Tagging with Jev (tagger/tag.py, harness/run.py on a new config) needs:
+requests>=2.28
+# Running or training the student (student/infer.py, student/train.py) also needs:
+#   torch  "transformers>=4.51"  sentencepiece
+# Re-judging (harness/judge_v2.py) also needs: anthropic

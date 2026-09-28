@@ -1,0 +1,579 @@
+{
+ "randomized-controlled-trial": {
+  "est": {
+   "precision_pubmed": 0.6538895272117933,
+   "precision_openalex": 0.9957186191847234,
+   "recall_pubmed": 0.8940517771346945,
+   "recall_openalex": 0.7858262259122127,
+   "precision_openalex_not_in_medline": 0.9847514442537112,
+   "precision_openalex_all_works": 0.9892566945805255
+  },
+  "ci": {
+   "precision_pubmed": [
+    0.6345639990400396,
+    0.674722175688159
+   ],
+   "precision_openalex": [
+    0.9846476516297457,
+    0.9975993582142103
+   ],
+   "recall_pubmed": [
+    0.7226660575804669,
+    0.9629667311898666
+   ],
+   "recall_openalex": [
+    0.637314035201115,
+    0.8537343943637611
+   ],
+   "precision_openalex_not_in_medline": [
+    0.9679586977533803,
+    0.994424919823463
+   ],
+   "precision_openalex_all_works": [
+    0.9794595888767798,
+    0.9949257689674645
+   ]
+  },
+  "plug_in": {
+   "precision_pubmed": 0.6550187119958141,
+   "precision_openalex": 0.9969581038529549,
+   "recall_pubmed": 0.9040515996909421,
+   "recall_openalex": 0.7966758901690771,
+   "precision_openalex_not_in_medline": 0.9852507374631269,
+   "precision_openalex_all_works": 0.9905755408633596
+  },
+  "judged": {
+   "both": 190,
+   "pubmed_only": 334,
+   "neither": 779,
+   "openalex_only": 327,
+   "openalex_not_in_medline": 339
+  },
+  "right": {
+   "both": 190,
+   "pubmed_only": 74,
+   "neither": 1,
+   "openalex_only": 301,
+   "openalex_not_in_medline": 334
+  },
+  "population": {
+   "both": 367098,
+   "pubmed_only": 292164,
+   "openalex_only": 14603,
+   "openalex_not_in_medline": 457525,
+   "neither": 25230853
+  }
+ },
+ "clinical-trial": {
+  "est": {
+   "precision_pubmed": 0.6748790856143129,
+   "precision_openalex": 0.9477057831081059,
+   "recall_pubmed": 0.6256565860923413,
+   "recall_openalex": 0.808103703284784,
+   "precision_openalex_not_in_medline": 0.9102601451313276,
+   "precision_openalex_all_works": 0.922082526623156
+  },
+  "ci": {
+   "precision_pubmed": [
+    0.650921833880425,
+    0.7001941795520712
+   ],
+   "precision_openalex": [
+    0.9286093591888854,
+    0.9628987426814426
+   ],
+   "recall_pubmed": [
+    0.5458930601138887,
+    0.6729405433305677
+   ],
+   "recall_openalex": [
+    0.708136417918765,
+    0.8706268837005623
+   ],
+   "precision_openalex_not_in_medline": [
+    0.8704283488810677,
+    0.9432831230322227
+   ],
+   "precision_openalex_all_works": [
+    0.893846821891744,
+    0.9446817210602931
+   ]
+  },
+  "plug_in": {
+   "precision_pubmed": 0.6759690114218512,
+   "precision_openalex": 0.9494793819436727,
+   "recall_pubmed": 0.6281206819123485,
+   "recall_openalex": 0.8130432321616737,
+   "precision_openalex_not_in_medline": 0.9113924050632911,
+   "precision_openalex_all_works": 0.9235893700492214
+  },
+  "judged": {
+   "openalex_only": 240,
+   "pubmed_only": 230,
+   "both": 190,
+   "neither": 760,
+   "openalex_not_in_medline": 237
+  },
+  "right": {
+   "openalex_only": 210,
+   "pubmed_only": 57,
+   "both": 189,
+   "neither": 3,
+   "openalex_not_in_medline": 216
+  },
+  "population": {
+   "both": 581765,
+   "pubmed_only": 433145,
+   "openalex_only": 353510,
+   "openalex_not_in_medline": 1985271,
+   "neither": 24536298
+  }
+ },
+ "observational-study": {
+  "est": {
+   "precision_pubmed": 0.8889532486824,
+   "precision_openalex": 0.9787396165916992,
+   "recall_pubmed": 0.030821502475328767,
+   "recall_openalex": 0.790603147970713,
+   "precision_openalex_not_in_medline": 0.9907026795936011,
+   "precision_openalex_all_works": 0.9859936851084105
+  },
+  "ci": {
+   "precision_pubmed": [
+    0.871252754130607,
+    0.9027036682251055
+   ],
+   "precision_openalex": [
+    0.9565065924135724,
+    0.9922291047879558
+   ],
+   "recall_pubmed": [
+    0.02875029753081219,
+    0.03288597908904764
+   ],
+   "recall_openalex": [
+    0.7386293983882414,
+    0.8377069810494553
+   ],
+   "precision_openalex_not_in_medline": [
+    0.9742149421137822,
+    0.9982358408103423
+   ],
+   "precision_openalex_all_works": [
+    0.9731571927098543,
+    0.9936623222015498
+   ]
+  },
+  "plug_in": {
+   "precision_pubmed": 0.8902615296114091,
+   "precision_openalex": 0.9797109724401301,
+   "recall_pubmed": 0.030881195245295232,
+   "recall_openalex": 0.7917490959146455,
+   "precision_openalex_not_in_medline": 0.9915966386554622,
+   "precision_openalex_all_works": 0.987479723646962
+  },
+  "judged": {
+   "openalex_not_in_medline": 238,
+   "neither": 635,
+   "openalex_only": 240,
+   "both": 189,
+   "pubmed_only": 234
+  },
+  "right": {
+   "openalex_not_in_medline": 236,
+   "neither": 39,
+   "openalex_only": 235,
+   "both": 188,
+   "pubmed_only": 100
+  },
+  "population": {
+   "both": 176203,
+   "pubmed_only": 39757,
+   "openalex_only": 4855169,
+   "openalex_not_in_medline": 9494361,
+   "neither": 20833589
+  }
+ },
+ "case-report": {
+  "est": {
+   "precision_pubmed": 0.9014315657101534,
+   "precision_openalex": 0.9917193778895992,
+   "recall_pubmed": 0.8249750389824291,
+   "recall_openalex": 0.8022014038635826,
+   "precision_openalex_not_in_medline": 0.9868658789626522,
+   "precision_openalex_all_works": 0.9884247761273871
+  },
+  "ci": {
+   "precision_pubmed": [
+    0.882777248734103,
+    0.9177916421701328
+   ],
+   "precision_openalex": [
+    0.9759711988852301,
+    0.9972620682381836
+   ],
+   "recall_pubmed": [
+    0.7510476329221084,
+    0.8693975738454038
+   ],
+   "recall_openalex": [
+    0.7300369976381076,
+    0.8470295763027755
+   ],
+   "precision_openalex_not_in_medline": [
+    0.9665285606344384,
+    0.9965545542249395
+   ],
+   "precision_openalex_all_works": [
+    0.9761179540814197,
+    0.9952017495243558
+   ]
+  },
+  "plug_in": {
+   "precision_pubmed": 0.9031045770493167,
+   "precision_openalex": 0.9927672422740119,
+   "recall_pubmed": 0.8278329666304498,
+   "recall_openalex": 0.8050379204217322,
+   "precision_openalex_not_in_medline": 0.9875,
+   "precision_openalex_all_works": 0.9899447774416188
+  },
+  "judged": {
+   "openalex_not_in_medline": 240,
+   "both": 190,
+   "pubmed_only": 213,
+   "openalex_only": 240,
+   "neither": 740
+  },
+  "right": {
+   "openalex_not_in_medline": 237,
+   "both": 189,
+   "pubmed_only": 126,
+   "openalex_only": 235,
+   "neither": 4
+  },
+  "population": {
+   "both": 1284169,
+   "pubmed_only": 377690,
+   "openalex_only": 185970,
+   "openalex_not_in_medline": 1697257,
+   "neither": 24056889
+  }
+ },
+ "systematic-review": {
+  "est": {
+   "precision_pubmed": 0.9217880472587154,
+   "precision_openalex": 0.9849052744396058,
+   "recall_pubmed": 0.7821498843851455,
+   "recall_openalex": 0.8607328836765582,
+   "precision_openalex_not_in_medline": 0.9867880695699696,
+   "precision_openalex_all_works": 0.985878435875409
+  },
+  "ci": {
+   "precision_pubmed": [
+    0.9088713993898704,
+    0.9318490343056507
+   ],
+   "precision_openalex": [
+    0.9739911588283996,
+    0.9906923034907362
+   ],
+   "recall_pubmed": [
+    0.6377741849728027,
+    0.8435880006763492
+   ],
+   "recall_openalex": [
+    0.7001342631830912,
+    0.928478363060019
+   ],
+   "precision_openalex_not_in_medline": [
+    0.9673779004807787,
+    0.9964571782440892
+   ],
+   "precision_openalex_all_works": [
+    0.9731343067824955,
+    0.9926661699892366
+   ]
+  },
+  "plug_in": {
+   "precision_pubmed": 0.923839600451486,
+   "precision_openalex": 0.9867755462040086,
+   "recall_pubmed": 0.792390548714879,
+   "recall_openalex": 0.8714183496257774,
+   "precision_openalex_not_in_medline": 0.9875,
+   "precision_openalex_all_works": 0.9872358646484602
+  },
+  "judged": {
+   "neither": 785,
+   "openalex_only": 233,
+   "pubmed_only": 233,
+   "openalex_not_in_medline": 240,
+   "both": 190
+  },
+  "right": {
+   "neither": 1,
+   "openalex_only": 215,
+   "pubmed_only": 112,
+   "openalex_not_in_medline": 237,
+   "both": 190
+  },
+  "population": {
+   "both": 348021,
+   "pubmed_only": 59811,
+   "openalex_only": 71880,
+   "openalex_not_in_medline": 731777,
+   "neither": 25425006
+  }
+ },
+ "meta-analysis": {
+  "est": {
+   "precision_pubmed": 0.9049803468699408,
+   "precision_openalex": 0.9922634140410754,
+   "recall_pubmed": 0.7296938573705548,
+   "recall_openalex": 0.6970809237671082,
+   "precision_openalex_not_in_medline": 0.9865164191489121,
+   "precision_openalex_all_works": 0.9890570479984752
+  },
+  "ci": {
+   "precision_pubmed": [
+    0.8918792635326253,
+    0.9165790220303179
+   ],
+   "precision_openalex": [
+    0.9811717043149671,
+    0.9951967917623412
+   ],
+   "recall_pubmed": [
+    0.5000083314626769,
+    0.9087276474250696
+   ],
+   "recall_openalex": [
+    0.47657646338764476,
+    0.8673993214606801
+   ],
+   "precision_openalex_not_in_medline": [
+    0.9656991211709003,
+    0.9962111857267989
+   ],
+   "precision_openalex_all_works": [
+    0.9783780724805453,
+    0.9945164056739981
+   ]
+  },
+  "plug_in": {
+   "precision_pubmed": 0.906811463552695,
+   "precision_openalex": 0.9938268819782037,
+   "recall_pubmed": 0.7458359648049011,
+   "recall_openalex": 0.7125586658759637,
+   "precision_openalex_not_in_medline": 0.9872881355932204,
+   "precision_openalex_all_works": 0.9908124989422046
+  },
+  "judged": {
+   "openalex_only": 226,
+   "neither": 794,
+   "pubmed_only": 234,
+   "openalex_not_in_medline": 236,
+   "both": 190
+  },
+  "right": {
+   "openalex_only": 198,
+   "neither": 2,
+   "pubmed_only": 107,
+   "openalex_not_in_medline": 233,
+   "both": 190
+  },
+  "population": {
+   "both": 197545,
+   "pubmed_only": 40950,
+   "openalex_only": 10359,
+   "openalex_not_in_medline": 177820,
+   "neither": 25655864
+  }
+ },
+ "study-protocol": {
+  "est": {
+   "precision_pubmed": 0.9778385552673415,
+   "precision_openalex": 0.9389017306273849,
+   "recall_pubmed": 0.344601401010165,
+   "recall_openalex": 0.8719927401778755,
+   "precision_openalex_not_in_medline": 0.7531857546771522,
+   "precision_openalex_all_works": 0.8121304161460395
+  },
+  "ci": {
+   "precision_pubmed": [
+    0.9665957989958773,
+    0.9825985298842796
+   ],
+   "precision_openalex": [
+    0.9120117889680662,
+    0.9605523930879835
+   ],
+   "recall_pubmed": [
+    0.16671526203333542,
+    0.39277361192986776
+   ],
+   "recall_openalex": [
+    0.420946865015524,
+    0.9827644777087955
+   ],
+   "precision_openalex_not_in_medline": [
+    0.6967112415653574,
+    0.8046872550847373
+   ],
+   "precision_openalex_all_works": [
+    0.7724334600949119,
+    0.8477933232632272
+   ]
+  },
+  "plug_in": {
+   "precision_pubmed": 0.9796470640220347,
+   "precision_openalex": 0.9404517505479445,
+   "recall_pubmed": 0.38887223281406447,
+   "recall_openalex": 0.9830338362739385,
+   "precision_openalex_not_in_medline": 0.7543103448275862,
+   "precision_openalex_all_works": 0.8134299840353888
+  },
+  "judged": {
+   "openalex_not_in_medline": 232,
+   "neither": 799,
+   "openalex_only": 238,
+   "pubmed_only": 217,
+   "both": 188
+  },
+  "right": {
+   "openalex_not_in_medline": 175,
+   "neither": 0,
+   "openalex_only": 216,
+   "pubmed_only": 147,
+   "both": 188
+  },
+  "population": {
+   "both": 22571,
+   "pubmed_only": 1520,
+   "openalex_only": 40867,
+   "openalex_not_in_medline": 136300,
+   "neither": 25839760
+  }
+ },
+ "_full_text": {
+  "pubmed_only": {
+   "tags": 247,
+   "right_abstract_judge": 83,
+   "right_full_text_judge": 86
+  },
+  "openalex_only": {
+   "tags": 251,
+   "right_abstract_judge": 234,
+   "right_full_text_judge": 227
+  }
+ },
+ "_full_text_adjusted": {
+  "randomized-controlled-trial": {
+   "precision_pubmed": 0.6944114471046682,
+   "precision_openalex": 0.9940887768142519,
+   "shift": {
+    "pubmed_only": 0.08888888888888889,
+    "openalex_only": -0.075
+   },
+   "full_text_works": {
+    "pubmed_only": 45,
+    "openalex_only": 40
+   }
+  },
+  "clinical-trial": {
+   "precision_pubmed": 0.6881627738525805,
+   "precision_openalex": 0.9494793819436727,
+   "shift": {
+    "pubmed_only": 0.02857142857142857,
+    "openalex_only": 0.0
+   },
+   "full_text_works": {
+    "pubmed_only": 35,
+    "openalex_only": 33
+   }
+  },
+  "observational-study": {
+   "precision_pubmed": 0.894863886529357,
+   "precision_openalex": 0.9998147044175444,
+   "shift": {
+    "pubmed_only": 0.025,
+    "openalex_only": 0.02702702702702703
+   },
+   "full_text_works": {
+    "pubmed_only": 40,
+    "openalex_only": 37
+   }
+  },
+  "case-report": {
+   "precision_pubmed": 0.9031045770493167,
+   "precision_openalex": 0.9830366082214601,
+   "shift": {
+    "pubmed_only": 0.0,
+    "openalex_only": -0.07692307692307693
+   },
+   "full_text_works": {
+    "pubmed_only": 6,
+    "openalex_only": 13
+   }
+  },
+  "systematic-review": {
+   "precision_pubmed": 0.9200791908107139,
+   "precision_openalex": 0.9745481742418421,
+   "shift": {
+    "pubmed_only": -0.02564102564102564,
+    "openalex_only": -0.07142857142857142
+   },
+   "full_text_works": {
+    "pubmed_only": 39,
+    "openalex_only": 42
+   }
+  },
+  "meta-analysis": {
+   "precision_pubmed": 0.9025189207320908,
+   "precision_openalex": 0.9925812349488055,
+   "shift": {
+    "pubmed_only": -0.025,
+    "openalex_only": -0.025
+   },
+   "full_text_works": {
+    "pubmed_only": 40,
+    "openalex_only": 40
+   }
+  },
+  "study-protocol": {
+   "precision_pubmed": 0.9781448235093755,
+   "precision_openalex": 0.9404517505479445,
+   "shift": {
+    "pubmed_only": -0.023809523809523808,
+    "openalex_only": 0.0
+   },
+   "full_text_works": {
+    "pubmed_only": 42,
+    "openalex_only": 46
+   }
+  }
+ },
+ "_core_precision_pubmed": {
+  "randomized-controlled-trial": 0.6581200399394187,
+  "clinical-trial": 0.6775693185636068,
+  "observational-study": 0.8900729781990132,
+  "case-report": 0.9022401353706007,
+  "systematic-review": 0.9224240121219043,
+  "meta-analysis": 0.9049493718125032,
+  "study-protocol": 0.9780320084750552
+ },
+ "_most_cited_not_rct": {
+  "most_cited_pubmed_rct": [
+   "W2015795623",
+   "W2160834915",
+   "W2138595885",
+   "W2140534852",
+   "W2274722622",
+   "W2322095705",
+   "W1968105193",
+   "W2110664940",
+   "W2105882193",
+   "W2128349740"
+  ],
+  "most_cited_openalex_rct": []
+ }
+}
