@@ -35,4 +35,6 @@ How it got here:
   thresholds for three values (Randomized Controlled Trial 0.95, Clinical Trial 0.97, Study Protocol 0.95; applied to
   the stored scores, nothing re-tagged), and a second-model check on every randomized-trial tag
   (`tagger/rct_check.py`). Both were chosen on two samples (`benchmarks/data/thresholds_sample`,
-  `benchmarks/data/rct_check_sample`) and scored on a third, fresh one (`benchmarks/data/pubmed`).
+  `benchmarks/data/rct_check_sample`) and scored on a third, fresh one (`benchmarks/data/pubmed`). Also from 29
+  September: no more PubMed fallback. Works without an abstract used to carry PubMed's tags; judged on their titles
+  those were right 37% (randomized trials) to 94% (case reports) of the time, so 642,057 works no longer get a value.

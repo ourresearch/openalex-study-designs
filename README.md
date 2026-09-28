@@ -3,7 +3,7 @@
 How [OpenAlex](https://openalex.org) decides whether a work is a randomized controlled trial, a clinical trial, an
 observational study, a case report, a systematic review, a meta-analysis or a study protocol. Since
 **26 September 2026** every work has a [`study_designs`](https://help.openalex.org/data/study-designs/) field, and
-**21.5 million works** have at least one value. PubMed's tags cover 4.0 million works in OpenAlex. For the rest, which is most
+**20.9 million works** have at least one value. PubMed's tags cover 4.0 million works in OpenAlex. For the rest, which is most
 of the literature, nobody had tagged study design before. This is **version 1.0.0** (see the [changelog](CHANGELOG.md)).
 
 > **Everything is here:** the code, the models, every test set and every judge verdict, so you can check our numbers
@@ -85,7 +85,6 @@ abstract doesn't support. Adjusted for that, PubMed's precision is 69% instead o
 5. **Scale.** A small model ([multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small),
    fine-tuned on 1.5 million of Jev's answers) tagged most of the backlog. Jev decides every randomized trial and
    tags every new work each night. See [student/](student/).
-6. **Fill the gaps from PubMed.** Works with no abstract keep PubMed's tags, where it has them.
 
 Parents are implied: a randomized controlled trial is also a clinical trial, and a meta-analysis is also a
 systematic review. The seven values and their definitions are on the
@@ -93,15 +92,14 @@ systematic review. The seven values and their definitions are on the
 
 ## Known issues
 
-- **PubMed's tags on works with no abstract.** 642,000 works have no abstract, so the tagger never runs on them and
-  they carry PubMed's tags alone (579,000 of them case reports). We can't check those the same way; judged on their
-  titles, they fall well short of our bar (randomized trials 37% right where the title was enough to decide).
 - **Recall.** Precision comes first, so we leave a work untagged when we are unsure: we find 69% of the randomized
   trials and 59% of the clinical trials in MEDLINE.
 - **Trials that never say "randomized".** The [CARE trial](https://pubmed.ncbi.nlm.nih.gov/8801446/) is
   randomized, but its abstract says only "double-blind", so we tag it as a clinical trial and not as randomized.
 - **Wrong abstracts upstream.** A few works in OpenAlex carry another paper's abstract; the tagger reads what is there.
-- **No abstract, no tag.** About 160 million works have no abstract in OpenAlex.
+- **No abstract, no tag.** About 160 million works have no abstract in OpenAlex, so they get no study design. We used
+  to fill in PubMed's tags for 642,000 of them, but judged on their titles those tags fell well short of our bar
+  (randomized trials 37% right), so since 29 September we don't.
 
 ## Find stronger evidence
 

@@ -151,8 +151,8 @@ Controlled Trial nor Clinical Trial.
 
 ## PubMed's tags on works with no abstract
 
-642,057 works have no abstract, so the tagger never runs on them and they carry PubMed's tags alone. PubMed rarely has
-their abstract either. We judged 150 per design on the title, the venue and, for the 45 that are open access, the full
+642,057 works have no abstract, so the tagger never runs on them; until 29 September they carried PubMed's tags alone.
+PubMed rarely has their abstract either. We judged 150 per design on the title, the venue and, for the 45 that are open access, the full
 text:
 
 | PubMed-only tag | Sampled | Too little text to decide | Right, where the judge could decide |
@@ -164,6 +164,8 @@ text:
 | Systematic Review | 150 | 35 | 103 of 115 |
 | Meta-Analysis | 150 | 38 | 49 of 112 |
 | Study Protocol | 54 | 4 | 42 of 50 |
+
+None clears our bar, so from 29 September these works carry no study design.
 
 ## Checks on PubMed
 
