@@ -15,6 +15,7 @@ import argparse, json, os, sys, threading, time
 from concurrent.futures import ThreadPoolExecutor
 
 MODEL = "claude-sonnet-5"
+FALLBACK_MODEL = "claude-opus-5-5"   # asked only when MODEL refuses (it declines some ordinary biomedical papers)
 SYSTEM = "You check one claim about a scholarly work for an index that must not mislabel papers: that this work is the original report of a randomized controlled trial's results. Read the title, the venue and the abstract. Say no when the work is a summary, digest, journal-club piece, commentary, editorial, letter, news item, review or reprinted abstract of a trial published elsewhere (signs: a digest or evidence-summary venue, a title that reads as a comment or a theme rather than the trial, an abstract that describes another group's trial); when it is a protocol; when it is a secondary, post-hoc, subgroup, exploratory, mediation or pooled analysis of an earlier trial's data; when the units randomized are not people, clusters of people or treatment periods (animals, firms, documents, devices); or when the text never states that allocation was random ('randomly selected' patients is sampling, not allocation). Primary, updated, follow-up or extension results of the trial itself count as yes."
 SCHEMA = {'type': 'object', 'properties': {'own_trial_report': {'type': 'boolean'}, 'reason': {'type': 'string'}}, 'required': ['own_trial_report', 'reason'], 'additionalProperties': False}
 ABSTRACT_CHARS = 6000
@@ -26,11 +27,16 @@ def work_text(w: dict) -> str:
 
 def check(client, w: dict, model: str = MODEL) -> dict:
     """One work -> {work_id, own_trial_report, reason, model, in, out, checked_at}, or {work_id, error}."""
+    def ask(mdl):
+        return client.messages.create(model=mdl, max_tokens=4000,   # room for the model's own reasoning before the JSON
+                                      system=[{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
+                                      messages=[{"role": "user", "content": work_text(w)}],
+                                      output_config={"format": {"type": "json_schema", "schema": SCHEMA}})
     try:
-        m = client.messages.create(model=model, max_tokens=800,
-                                   system=[{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
-                                   messages=[{"role": "user", "content": work_text(w)}],
-                                   output_config={"format": {"type": "json_schema", "schema": SCHEMA}})
+        m = ask(model)
+        if m.stop_reason == "refusal":
+            model = FALLBACK_MODEL
+            m = ask(model)
         ans = json.loads("".join(b.text for b in m.content if b.type == "text"))
         return {"work_id": w["work_id"], "own_trial_report": bool(ans["own_trial_report"]), "reason": ans["reason"][:400],
                 "model": model, "in": m.usage.input_tokens, "out": m.usage.output_tokens,

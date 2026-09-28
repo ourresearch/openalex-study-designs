@@ -5,6 +5,12 @@ The tagger uses [semantic versioning](https://semver.org). A **major** version c
 the gates, the thresholds, the Jev snapshot or the student) and re-certifies it on the development set. A **patch**
 fixes code without changing any answer. Every release reports its certification here.
 
+## 1.0.1 (28 September 2026)
+
+The RCT check (`tagger/rct_check.py`) gets room for the model's reasoning (4,000 output tokens, was 800) and asks
+Claude Opus 5.5 when Sonnet 5 refuses a paper. About 200 of the 627,013 works checked at launch had no answer
+because of one or the other; nothing else changes.
+
 ## 1.0.0 (28 September 2026)
 
 First public release: the tagger's code, its request to Jev, the development set (ids and labels), every
