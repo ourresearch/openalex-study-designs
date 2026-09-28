@@ -46,3 +46,20 @@ def student_classes(scores: dict) -> list:
 
 def student_values(scores: dict) -> list:
     return [VALUE_ID[c] for c in student_classes(scores)]
+
+
+# Served thresholds (28 September 2026): the student's protocol tags outside PubMed were right 72% of the time on the
+# population-weighted benchmark, and Clinical Trial fell under its bar for Jev and the student alike, so OpenAlex serves
+# these two values only above 0.97 (Clinical Trial) and 0.95 (Study Protocol). Same rule as
+# tagger.study_design.SERVED_THRESHOLDS; the student still never serves RCT.
+STUDENT_SERVED_THRESHOLDS = {**STUDENT_TAU_POS, "clinical_trial": 0.97, "protocol": 0.95}
+
+
+def student_served_values(scores: dict) -> list:
+    """The values OpenAlex serves for a work the student tagged."""
+    from tagger.study_design import CLASSES, PARENT, SERVED_CLASSES, VALUE_ID, SCORE_EPS
+    hit = {c for c in SERVED_CLASSES if c in STUDENT_SERVED_THRESHOLDS and scores.get(c, 0.0) >= STUDENT_SERVED_THRESHOLDS[c] - SCORE_EPS}
+    for c in list(hit):
+        if c in PARENT:
+            hit.add(PARENT[c])
+    return [VALUE_ID[c] for c in CLASSES if c in hit]

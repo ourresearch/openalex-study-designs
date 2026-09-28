@@ -15,9 +15,9 @@ RCT 1.000 precision (0 false positives in 555, bound 0.995) at 0.83 recall; ever
 (`python harness/certify.py`). Re-judged by Opus 5.5 (`--judge opus-5.5`), RCT is 0.995 (3 false positives, bound
 0.987) and Clinical Trial 0.960 (bound 0.948), both just under their bars.
 
-Benchmarked against PubMed on 7,742 fresh works judged by Opus 5.5 (`python3 benchmarks/score_pubmed.py`): on
-PubMed-indexed works, RCT precision 99.6% (PubMed's tags: 65%). Outside PubMed, Study Protocol is 75% and Clinical
-Trial 91%, below their bars (see the README's Known issues).
+Benchmarked against PubMed on 8,308 fresh works judged by Opus 5.5, with the rule served from 29 September
+(`python3 benchmarks/score_pubmed.py`): on PubMed-indexed works, RCT precision 99.9% (PubMed's tags: 63%); outside
+PubMed every design is at least 97% and RCT 99.5%.
 
 How it got here:
 
@@ -29,3 +29,10 @@ How it got here:
   backlog stay.
 - **27 September 2026.** The rule for which source wins: automated tagging wherever it ran; PubMed's publication
   types only on works without an abstract, where the tagger did not run.
+- **28 September 2026.** A population-weighted benchmark showed the development set had overstated precision on the
+  works we tag (it is mostly biomedical, and its pools were picked by the tagger's own answers): Clinical Trial 92%,
+  Study Protocol 81%, randomized trials outside PubMed 98.5%. Two fixes, served from 29 September: stricter served
+  thresholds for three values (Randomized Controlled Trial 0.95, Clinical Trial 0.97, Study Protocol 0.95; applied to
+  the stored scores, nothing re-tagged), and a second-model check on every randomized-trial tag
+  (`tagger/rct_check.py`). Both were chosen on two samples (`benchmarks/data/thresholds_sample`,
+  `benchmarks/data/rct_check_sample`) and scored on a third, fresh one (`benchmarks/data/pubmed`).

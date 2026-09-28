@@ -234,9 +234,27 @@ def tagger_values(scores: dict) -> list[str]:
     return [VALUE_ID[c] for c in classes_at_thresholds(scores)]
 
 
+# Served thresholds (28 September 2026): stricter than the tagging thresholds for three values. The development set
+# overstated precision on the works OpenAlex actually tags (it is mostly biomedical); a population-weighted benchmark
+# found Clinical Trial at 92%, Study Protocol at 81% and randomized trials outside PubMed at 98.5%. These cuts were
+# chosen on that sample (benchmarks/data/calibration/) and certified on a fresh one (benchmarks/data/pubmed/). OpenAlex
+# applies them to the stored scores when it builds the served values, so the tagging itself (tagger_values) is unchanged.
+SERVED_THRESHOLDS = {**THRESHOLDS, "rct": 0.95, "clinical_trial": 0.97, "protocol": 0.95}
+SCORE_EPS = 1e-6   # scores are stored as 32-bit floats: a stored 0.82 reads back as 0.8199999 and must still pass 0.82
+
+
+def served_classes(scores: dict) -> list[str]:
+    """Class names OpenAlex serves (PubMed's vocabulary only) at the served thresholds, parents added."""
+    hit = {c for c in SERVED_CLASSES if scores.get(c, 0.0) >= SERVED_THRESHOLDS[c] - SCORE_EPS}
+    for c in list(hit):
+        if c in PARENT:
+            hit.add(PARENT[c])
+    return [c for c in CLASSES if c in hit]
+
+
 def served_values(scores: dict) -> list[str]:
-    """The values OpenAlex serves: tagger_values without other-primary-research."""
-    return [VALUE_ID[c] for c in classes_at_thresholds(scores) if c in SERVED_CLASSES]
+    """The values OpenAlex serves for a work Jev tagged."""
+    return [VALUE_ID[c] for c in served_classes(scores)]
 
 
 # ---------------------------------------------------------------------------

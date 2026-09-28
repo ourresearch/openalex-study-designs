@@ -22,7 +22,7 @@ from tagger import study_design as sd  # noqa: E402
 
 OUTPUTS = f"{ROOT}/benchmarks/data/dev/dev_jev_outputs.jsonl.gz"
 CONSTANTS = ["JEV_URL", "JEV_MODEL", "CONFIG_NAME", "TAGGER_VERSION", "ABSTRACT_CHARS", "RULE", "DESIGN", "NOULS", "CLASSES",
-             "THRESHOLDS", "VALUE_ID", "PARENT", "SERVED_CLASSES", "DISPLAY_NAME", "DESCRIPTION", "PUBMED_MAP"]
+             "THRESHOLDS", "SERVED_THRESHOLDS", "SCORE_EPS", "VALUE_ID", "PARENT", "SERVED_CLASSES", "DISPLAY_NAME", "DESCRIPTION", "PUBMED_MAP"]
 GATES = ["stated_random", "simulation_title", "secondary_title"]
 
 
@@ -54,7 +54,7 @@ def main():
             if "error" not in r:
                 text[str(r["work_id"])] = r
 
-    mism = {"scores": 0, "values": 0, **{g: 0 for g in GATES}, "stored_scores": 0, "request": 0, "constants": 0}
+    mism = {"scores": 0, "values": 0, **{g: 0 for g in GATES}, "stored_scores": 0, "request": 0, "constants": 0, "served": 0}
     n = 0
     if a.reference:
         ref = load_module(a.reference)
@@ -113,6 +113,9 @@ def main():
             mism["scores"] += 1
         if ref_values and ref_values(theirs) != sd.tagger_values(ours):
             mism["values"] += 1
+        ref_served = getattr(ref, "served_classes", None) if a.reference else None
+        if ref_served and ref_served(theirs) != sd.served_classes(ours):
+            mism["served"] += 1
         for g, f in ref_gates.items():
             if bool(f(w)) != bool(our_gates[g]):
                 mism[g] += 1

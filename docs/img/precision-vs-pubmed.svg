@@ -15,38 +15,38 @@
 <line x1="664.0" y1="50.0" x2="664.0" y2="440.0" stroke="#8b949e" stroke-width="1" stroke-opacity="0.35"/>
 <text x="664.0" y="40.0" fill="#707a84" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">100%</text>
 <text x="0.0" y="89.0" fill="#707a84" font-size="15" font-weight="600" text-anchor="start" dominant-baseline="middle">Randomized Controlled Trial</text>
-<path d="M210.0,73.0 H502.9 Q506.9,73.0 506.9,77.0 V83.0 Q506.9,87.0 502.9,87.0 H210.0 Z" fill="#199e70"/>
-<text x="512.9" y="80.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">65%</text>
-<path d="M210.0,91.0 H658.1 Q662.1,91.0 662.1,95.0 V101.0 Q662.1,105.0 658.1,105.0 H210.0 Z" fill="#2a78d6"/>
-<text x="668.1" y="98.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">99.6%</text>
+<path d="M210.0,73.0 H491.5 Q495.5,73.0 495.5,77.0 V83.0 Q495.5,87.0 491.5,87.0 H210.0 Z" fill="#199e70"/>
+<text x="501.5" y="80.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">63%</text>
+<path d="M210.0,91.0 H659.5 Q663.5,91.0 663.5,95.0 V101.0 Q663.5,105.0 659.5,105.0 H210.0 Z" fill="#2a78d6"/>
+<text x="669.5" y="98.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">99.9%</text>
 <text x="0.0" y="143.0" fill="#707a84" font-size="15" font-weight="600" text-anchor="start" dominant-baseline="middle">Clinical Trial</text>
-<path d="M210.0,127.0 H512.4 Q516.4,127.0 516.4,131.0 V137.0 Q516.4,141.0 512.4,141.0 H210.0 Z" fill="#199e70"/>
-<text x="522.4" y="134.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">67%</text>
-<path d="M210.0,145.0 H636.3 Q640.3,145.0 640.3,149.0 V155.0 Q640.3,159.0 636.3,159.0 H210.0 Z" fill="#2a78d6"/>
-<text x="646.3" y="152.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">95%</text>
+<path d="M210.0,127.0 H498.9 Q502.9,127.0 502.9,131.0 V137.0 Q502.9,141.0 498.9,141.0 H210.0 Z" fill="#199e70"/>
+<text x="508.9" y="134.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">65%</text>
+<path d="M210.0,145.0 H644.3 Q648.3,145.0 648.3,149.0 V155.0 Q648.3,159.0 644.3,159.0 H210.0 Z" fill="#2a78d6"/>
+<text x="654.3" y="152.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">97%</text>
 <text x="0.0" y="197.0" fill="#707a84" font-size="15" font-weight="600" text-anchor="start" dominant-baseline="middle">Observational Study</text>
-<path d="M210.0,181.0 H609.6 Q613.6,181.0 613.6,185.0 V191.0 Q613.6,195.0 609.6,195.0 H210.0 Z" fill="#199e70"/>
-<text x="619.6" y="188.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">89%</text>
-<path d="M210.0,199.0 H650.3 Q654.3,199.0 654.3,203.0 V209.0 Q654.3,213.0 650.3,213.0 H210.0 Z" fill="#2a78d6"/>
-<text x="660.3" y="206.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">98%</text>
+<path d="M210.0,181.0 H611.2 Q615.2,181.0 615.2,185.0 V191.0 Q615.2,195.0 611.2,195.0 H210.0 Z" fill="#199e70"/>
+<text x="621.2" y="188.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">89%</text>
+<path d="M210.0,199.0 H648.9 Q652.9,199.0 652.9,203.0 V209.0 Q652.9,213.0 648.9,213.0 H210.0 Z" fill="#2a78d6"/>
+<text x="658.9" y="206.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">98%</text>
 <text x="0.0" y="251.0" fill="#707a84" font-size="15" font-weight="600" text-anchor="start" dominant-baseline="middle">Case Report</text>
-<path d="M210.0,235.0 H615.2 Q619.2,235.0 619.2,239.0 V245.0 Q619.2,249.0 615.2,249.0 H210.0 Z" fill="#199e70"/>
-<text x="625.2" y="242.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">90%</text>
-<path d="M210.0,253.0 H656.2 Q660.2,253.0 660.2,257.0 V263.0 Q660.2,267.0 656.2,267.0 H210.0 Z" fill="#2a78d6"/>
-<text x="666.2" y="260.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">99%</text>
+<path d="M210.0,235.0 H609.5 Q613.5,235.0 613.5,239.0 V245.0 Q613.5,249.0 609.5,249.0 H210.0 Z" fill="#199e70"/>
+<text x="619.5" y="242.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">89%</text>
+<path d="M210.0,253.0 H654.6 Q658.6,253.0 658.6,257.0 V263.0 Q658.6,267.0 654.6,267.0 H210.0 Z" fill="#2a78d6"/>
+<text x="664.6" y="260.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">99%</text>
 <text x="0.0" y="305.0" fill="#707a84" font-size="15" font-weight="600" text-anchor="start" dominant-baseline="middle">Systematic Review</text>
-<path d="M210.0,289.0 H624.5 Q628.5,289.0 628.5,293.0 V299.0 Q628.5,303.0 624.5,303.0 H210.0 Z" fill="#199e70"/>
-<text x="634.5" y="296.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">92%</text>
-<path d="M210.0,307.0 H653.1 Q657.1,307.0 657.1,311.0 V317.0 Q657.1,321.0 653.1,321.0 H210.0 Z" fill="#2a78d6"/>
-<text x="663.1" y="314.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">98%</text>
+<path d="M210.0,289.0 H619.0 Q623.0,289.0 623.0,293.0 V299.0 Q623.0,303.0 619.0,303.0 H210.0 Z" fill="#199e70"/>
+<text x="629.0" y="296.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">91%</text>
+<path d="M210.0,307.0 H650.9 Q654.9,307.0 654.9,311.0 V317.0 Q654.9,321.0 650.9,321.0 H210.0 Z" fill="#2a78d6"/>
+<text x="660.9" y="314.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">98%</text>
 <text x="0.0" y="359.0" fill="#707a84" font-size="15" font-weight="600" text-anchor="start" dominant-baseline="middle">Meta-Analysis</text>
-<path d="M210.0,343.0 H616.9 Q620.9,343.0 620.9,347.0 V353.0 Q620.9,357.0 616.9,357.0 H210.0 Z" fill="#199e70"/>
-<text x="626.9" y="350.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">90%</text>
-<path d="M210.0,361.0 H656.5 Q660.5,361.0 660.5,365.0 V371.0 Q660.5,375.0 656.5,375.0 H210.0 Z" fill="#2a78d6"/>
-<text x="666.5" y="368.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">99%</text>
+<path d="M210.0,343.0 H605.0 Q609.0,343.0 609.0,347.0 V353.0 Q609.0,357.0 605.0,357.0 H210.0 Z" fill="#199e70"/>
+<text x="615.0" y="350.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">88%</text>
+<path d="M210.0,361.0 H655.1 Q659.1,361.0 659.1,365.0 V371.0 Q659.1,375.0 655.1,375.0 H210.0 Z" fill="#2a78d6"/>
+<text x="665.1" y="368.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">99%</text>
 <text x="0.0" y="413.0" fill="#707a84" font-size="15" font-weight="600" text-anchor="start" dominant-baseline="middle">Study Protocol</text>
-<path d="M210.0,397.0 H649.9 Q653.9,397.0 653.9,401.0 V407.0 Q653.9,411.0 649.9,411.0 H210.0 Z" fill="#199e70"/>
-<text x="659.9" y="404.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">98%</text>
-<path d="M210.0,415.0 H632.3 Q636.3,415.0 636.3,419.0 V425.0 Q636.3,429.0 632.3,429.0 H210.0 Z" fill="#2a78d6"/>
-<text x="642.3" y="422.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">94%</text>
+<path d="M210.0,397.0 H653.5 Q657.5,397.0 657.5,401.0 V407.0 Q657.5,411.0 653.5,411.0 H210.0 Z" fill="#199e70"/>
+<text x="663.5" y="404.0" fill="#707a84" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="middle">99%</text>
+<path d="M210.0,415.0 H658.4 Q662.4,415.0 662.4,419.0 V425.0 Q662.4,429.0 658.4,429.0 H210.0 Z" fill="#2a78d6"/>
+<text x="668.4" y="422.0" fill="#707a84" font-size="13" font-weight="600" text-anchor="start" dominant-baseline="middle">99.6%</text>
 </svg>

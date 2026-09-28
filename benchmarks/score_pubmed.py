@@ -1,8 +1,10 @@
 """Score the PubMed benchmark: PubMed's tags and OpenAlex's on the same works, one judge.
 
-    python3 benchmarks/score_pubmed.py            # prints every table, writes benchmarks/data/pubmed/results.json
+    python3 benchmarks/score_pubmed.py                    # the benchmark: prints every table, writes data/pubmed/results.json
+    python3 benchmarks/score_pubmed.py --data thresholds_sample   # the sample the served thresholds were chosen on
+    python3 benchmarks/score_pubmed.py --data rct_check_sample    # the sample that certified them and exposed the RCT gap
 
-Standard library only; reads benchmarks/data/pubmed/{sample.jsonl.gz, population.json}. How the sample was drawn and
+Standard library only; reads benchmarks/data/<set>/{sample.jsonl.gz, population.json}. How the sample was drawn and
 why the estimates are weighted: benchmarks/README.md.
 
 Per study design v, works indexed in MEDLINE fall into four cells: both (PubMed and OpenAlex tag v), pubmed_only,
@@ -15,11 +17,11 @@ Each cell's rate is drawn from its Jeffreys posterior, Beta(k + 1/2, n - k + 1/2
 recomputed per draw: the reported value is the median draw and the 95% interval the 2.5th to 97.5th percentile (a cell
 with no errors then counts as slightly below perfect, never as exactly 100%). Works the judge answered "unknown" (the text says too little) are left out.
 """
-import gzip, json, random
+import argparse, gzip, json, random
 from collections import defaultdict
 from pathlib import Path
 
-DATA = Path(__file__).parent / "data" / "pubmed"
+DATA = Path(__file__).parent / "data" / "pubmed"   # --data picks another set
 VALUES = ["randomized-controlled-trial", "clinical-trial", "observational-study", "case-report", "systematic-review",
           "meta-analysis", "study-protocol"]
 NAME = {"randomized-controlled-trial": "Randomized Controlled Trial", "clinical-trial": "Clinical Trial",
@@ -149,11 +151,14 @@ def full_text_adjusted(rows, pop):
 
 
 def main():
+    global DATA
+    ap = argparse.ArgumentParser(); ap.add_argument("--data", default="pubmed", help="pubmed (the benchmark), thresholds_sample or rct_check_sample")
+    DATA = Path(__file__).parent / "data" / ap.parse_args().data
     rows, pop = load()
     res = score(rows, pop)
     core = score(rows, pop, core_only=True, draws=500)
     pct = lambda v, k, r=res: f"{100 * r[v]['est'][k]:.1f}% ({100 * r[v]['ci'][k][0]:.1f}–{100 * r[v]['ci'][k][1]:.1f})"
-    print(f"{len(rows):,} works; MEDLINE population {pop['medline_works']:,}, as of {pop['as_of']}\n")
+    print(f"{len(rows):,} works; MEDLINE population {pop['medline_works']:,}, as of {pop['as_of']}; rule: {pop.get('rule')}\n")
     print("PubMed-indexed (MEDLINE) works: PubMed's tags and OpenAlex's on the same works\n")
     print("| Study design | PubMed precision | OpenAlex precision | PubMed recall | OpenAlex recall |")
     print("|---|---|---|---|---|")

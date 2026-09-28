@@ -138,11 +138,19 @@ production GPU outputs to within 0.007 in every probability, with the same route
 ## Benchmark vs PubMed
 
 Every table in [benchmarks/README.md](benchmarks/README.md) and the README's two charts, from the files in the repo
-(standard library, about a second):
+(standard library, about a second each):
 
 ```
-python3 benchmarks/score_pubmed.py      # prints the tables, writes benchmarks/data/pubmed/results.json
-python3 docs/charts/make_charts.py      # redraws docs/img/*.svg from results.json
+python3 benchmarks/score_pubmed.py                            # the benchmark; writes benchmarks/data/pubmed/results.json
+python3 benchmarks/score_pubmed.py --data thresholds_sample   # the sample the served thresholds were chosen on
+python3 benchmarks/score_pubmed.py --data rct_check_sample    # the sample that certified them
+python3 docs/charts/make_charts.py                            # redraws docs/img/*.svg from the benchmark's results.json
+```
+
+To run the RCT check on your own works (needs `pip install anthropic` and `ANTHROPIC_API_KEY`):
+
+```
+python3 tagger/rct_check.py --input works.jsonl --out checks.jsonl
 ```
 
 To judge the sample again, rebuild its texts from the API, then run the judge (needs `pip install anthropic` and
