@@ -39,24 +39,21 @@ Most people assume a PubMed tag is right, and where PubMed and we agree, it almo
 tags. Where only PubMed tags a design, the judge sides with PubMed on 30% of randomized trials, and on 33% to 89% of
 the other designs.
 
-Eight of the 100 most-cited works that PubMed tags as randomized controlled trials are not reports of one:
+Among the 100 most-cited works that PubMed tags as randomized controlled trials, these five are not reports of one on
+every check we ran: PubMed's own record, the paper's text, and two models applying PubMed's own definition of an RCT.
 
 | Work | PubMed's tags | What it is |
 |---|---|---|
 | Bland and Altman, [*Statistical methods for assessing agreement…*](https://pubmed.ncbi.nlm.nih.gov/2868172/), Lancet 1986 | RCT, Clinical Trial | A statistics methods paper |
 | [*Classification of subtype of acute ischemic stroke (TOAST)*](https://pubmed.ncbi.nlm.nih.gov/7678184/), Stroke 1993 | RCT, Clinical Trial | Definitions written for a trial |
 | [*Measuring individual differences in implicit cognition: the implicit association test*](https://pubmed.ncbi.nlm.nih.gov/9654756/), 1998 | RCT, Clinical Trial | Laboratory experiments that build a test |
-| [*Validation study of WOMAC*](https://pubmed.ncbi.nlm.nih.gov/3068365/), 1988 | RCT, Clinical Trial | Validates a questionnaire inside a trial |
-| [*Safety, activity, and immune correlates of anti-PD-1 antibody in cancer*](https://pubmed.ncbi.nlm.nih.gov/22658127/), NEJM 2012 | RCT, Phase I | A dose-escalation trial with no randomization |
-| [*Human papillomavirus and survival of patients with oropharyngeal cancer*](https://pubmed.ncbi.nlm.nih.gov/20530316/), NEJM 2010 | RCT | A retrospective analysis of trial patients |
-| [*A multigene assay to predict recurrence of tamoxifen-treated, node-negative breast cancer*](https://pubmed.ncbi.nlm.nih.gov/15591335/), NEJM 2004 | RCT, Clinical Trial | Archived tumor tissue from an earlier trial |
+| [*A multigene assay to predict recurrence of tamoxifen-treated, node-negative breast cancer*](https://pubmed.ncbi.nlm.nih.gov/15591335/), NEJM 2004 | RCT, Clinical Trial | A gene test on tumors from one arm of an earlier trial |
 | [*A new Simplified Acute Physiology Score (SAPS II)*](https://pubmed.ncbi.nlm.nih.gov/8254858/), JAMA 1993 | RCT, Clinical Trial | A risk score built from a cohort |
 
 The pattern holds for other designs. A series of
-[105 transplant patients](https://pubmed.ncbi.nlm.nih.gov/8560381/) is tagged Case Reports, a
-[retrospective review of 111 patients](https://pubmed.ncbi.nlm.nih.gov/26710309/) is tagged Clinical Trial, and
-[memory experiments on student volunteers](https://pubmed.ncbi.nlm.nih.gov/15005868/) are tagged as a randomized
-controlled trial. It is not a problem of old records: PubMed's RCT tags from 2015 onward are right 70% of the time
+[105 transplant patients](https://pubmed.ncbi.nlm.nih.gov/8560381/) is tagged Case Reports, and
+[memory experiments on volunteers](https://pubmed.ncbi.nlm.nih.gov/15005868/) are tagged as a randomized controlled
+trial. It is not a problem of old records: PubMed's RCT tags from 2015 onward are right 70% of the time
 (on our first sample).
 
 **Reading the full article barely changes the verdict.** PubMed's indexers read the whole paper and our judge reads

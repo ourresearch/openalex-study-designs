@@ -5,6 +5,13 @@ The tagger uses [semantic versioning](https://semver.org). A **major** version c
 the gates, the thresholds, the Jev snapshot or the student) and re-certifies it on the development set. A **patch**
 fixes code without changing any answer. Every release reports its certification here.
 
+## Documentation correction (29 September 2026)
+
+The README listed eight highly cited papers that PubMed tags as randomized controlled trials but that are not reports
+of one. A closer check (PubMed's record, full text where open, and PubMed's own definition) keeps five: the anti-PD-1
+phase 1 study randomized its dose cohorts, the HPV paper reports its trial's randomized comparison, and the WOMAC
+validation study is arguable. One example from another design was dropped for the same reason. Benchmarks unchanged.
+
 ## 1.0.1 (28 September 2026)
 
 The RCT check (`tagger/rct_check.py`) gets room for the model's reasoning (4,000 output tokens, was 800) and asks

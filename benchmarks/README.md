@@ -202,10 +202,15 @@ clinical trials 67.5% to 67.8%, observational studies 88.9% to 89.0%.
 2014, 70% from 2015 on. The gap is not an artifact of old indexing.
 
 **The 100 most-cited randomized trials, each side.** The judge flags 10 of PubMed's 100 most-cited
-"Randomized Controlled Trial" works. Two of the ten we don't count against PubMed: the
-[CARE trial](https://pubmed.ncbi.nlm.nih.gov/8801446/) is randomized but its abstract doesn't say so, and the
+"Randomized Controlled Trial" works. We checked each one three ways: PubMed's current record, the paper's text (the
+full text where it is open), and two models (Claude Opus 5.5 and Sonnet 5) applying PubMed's own definition of a
+randomized controlled trial. Five hold up on every check and are in the README. Five we don't count against PubMed:
+the [CARE trial](https://pubmed.ncbi.nlm.nih.gov/8801446/) is randomized but its abstract doesn't say so; the
 [enterotypes paper](https://pubmed.ncbi.nlm.nih.gov/21885731/) includes a small feeding study whose randomization we
-could not settle. That leaves the eight in the README. Under the rule served from 29 September, the judge supports all of our 100
+could not settle; the [anti-PD-1 phase 1 study](https://pubmed.ncbi.nlm.nih.gov/22658127/) randomized its dose cohorts,
+which only its full text says; the [HPV paper](https://pubmed.ncbi.nlm.nih.gov/20530316/) reports its trial's randomized
+comparison; and the [WOMAC validation study](https://pubmed.ncbi.nlm.nih.gov/3068365/) uses a trial's data, which makes
+the tag arguable. Under the rule served from 29 September, the judge supports all of our 100
 most-cited randomized trials.
 
 ## Development set
